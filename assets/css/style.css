@@ -1024,8 +1024,6 @@ td {
 /* banner part */
 .banner-slider {
     position: relative;
-    /* height: 100vh;
-    min-height: 600px; */
     overflow: hidden;
 }
 .banner-slider .owl-stage-outer {
@@ -1112,4 +1110,34 @@ td {
 }
 .banner-down-btn img {
     max-width: 70px;
+}
+
+/* products section */
+.products-section {
+    background: yellow;
+}
+.stroke-text{
+    font-size:100px;
+    text-align:center;
+    text-anchor:middle;
+    stroke: red;
+    stroke-width: 2px;
+    fill: none;
+}
+
+@supports((text-stroke: 2px black) or (-webkit-text-stroke: 2px black)) {
+    .aaa {
+        color: transparent;
+        -webkit-text-stroke: 2px black;
+        text-stroke: 2px black;
+        text-shadow: none;
+    }
+}
+.aaa {
+    font-size: 100px;
+}
+.aaa span {
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
 }
