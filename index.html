@@ -10,6 +10,7 @@
 
     <!-- vendor css -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
 
     <!-- theme stylesheet -->
     <link href="assets/css/style.css" rel="stylesheet" />
@@ -22,75 +23,166 @@
         <!-- header part -->
         <header class="main-header">
           <div class="container-fluid">
-            <div class="header-top d-flex justify-content-between">
-              <div class="header-top-left d-flex align-items-center">
-                <a href="index.html" class="d-flex align-items-center text-white text-uppercase me-3">
-                  <img class="me-2" src="assets/images/home-icon.png" alt="home-icon">Home
-                </a>
-                <div class="side-nav d-flex align-items-center">
-                  <div class="mobilenav">
-                    <div class="nav-backdrop"></div>
-                    <!-- hamburger -->
-                    <a href="javascript:;" class="hamburger">
-                      <span class="wrap">
-                        <span class="line"></span>
-                        <span class="line"></span>
-                        <span class="line"></span>
-                      </span>
-                      <span class="d-inline-block text-white text-uppercase mx-2">Menu</span>
-                    </a>
-                    <div class="menu-state" data-clickable="true">
-                      <div class="w-full d-flex justify-content-end">
-                        <a href="javascript:;" class="hamburger close">
-                          <span class="wrap">
-                            <span class="line"></span>
-                            <span class="line"></span>
-                          </span>
-                        </a>
-                      </div>
-                      <div class="menu-outer">
-                        <ul>
-                          <li><a href="about.html">About</a></li>
-                          <li><a href="our-products.html">Our Products</a></li>
-                          <li><a href="updates.html">Updates</a></li>
-                          <li><a href="contact.html">Contact</a></li>
-                        </ul>
+            <div class="header-upper-part">
+              <div class="header-top d-flex justify-content-between">
+                <div class="header-top-left d-flex align-items-center">
+                  <a href="index.html" class="header-top-home d-flex align-items-center text-white text-uppercase me-3">
+                    <img class="me-2" src="assets/images/home-icon.png" alt="home-icon">Home
+                  </a>
+                  <div class="side-nav d-flex align-items-center">
+                    <div class="mobilenav">
+                      <div class="nav-backdrop"></div>
+                      <!-- hamburger -->
+                      <a href="javascript:;" class="hamburger">
+                        <span class="wrap">
+                          <span class="line"></span>
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </span>
+                        <span class="d-inline-block text-white text-uppercase mx-2">Menu</span>
+                      </a>
+                      <div class="menu-state" data-clickable="true">
+                        <div class="w-full d-flex justify-content-end">
+                          <a href="javascript:;" class="hamburger close">
+                            <span class="wrap">
+                              <span class="line"></span>
+                              <span class="line"></span>
+                            </span>
+                          </a>
+                        </div>
+                        <div class="menu-outer">
+                          <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="our-products.html">Our Products</a></li>
+                            <li><a href="updates.html">Updates</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                <div class="header-top-right d-flex align-items-center justify-content-end">
+                  <div class="header-search position-relative d-flex">
+                    <input type="search" placeholder="Got an idea... Type here...">
+                    <button class="header-search-submit position-absolute top-0 end-0">
+                      <img src="assets/images/search-icon.svg" alt="search-icon">
+                    </button>
+                  </div>
+                  <div class="main-menu d-flex align-items-center mx-3">
+                    <ul>
+                      <li><a href="about.html">About</a></li>
+                      <li><a href="our-products.html">Our Products</a></li>
+                      <li><a href="updates.html">Updates</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                  </div>
+                  <div class="header-share-concept">
+                    <a href="#" class="d-flex"><img src="assets/images/share-concept.png" alt="share-concept"></a>
+                  </div>
+                </div>
               </div>
-              <div class="header-top-right d-flex align-items-center">
-                <div class="header-search position-relative d-flex">
-                  <input type="search" placeholder="Got an idea... Type here...">
-                  <button class="header-search-submit position-absolute top-0 end-0">
-                    <img src="assets/images/search-icon.svg" alt="search-icon">
-                  </button>
-                </div>
-                <div class="main-menu d-flex align-items-center mx-3">
-                  <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="our-products.html">Our Products</a></li>
-                    <li><a href="updates.html">Updates</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                  </ul>
-                </div>
-                <div class="header-share-concept">
-                  <a href="#" class="d-flex"><img src="assets/images/share-concept.png" alt="share-concept"></a>
-                </div>
+              <div class="header-bottom theme-heading d-flex justify-content-end">
+                <ul>
+                  <li><a href="tel:+919429613531">
+                    <img src="assets/images/tel-icon.svg" alt="tel-icon">
+                    +91 94296&nbsp;<span>13531</span>
+                  </a></li>
+                  <li><a href="mailto:sales@giantinflatables.in">
+                    <img src="assets/images/envelope-line-icon.svg" alt="mail-icon">
+                    sales@<span>giantinflatables.in</span>
+                  </a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="header-lower-part justify-content-between align-items-center">
+              <a href="index.html" class="logo">
+                <img src="assets/images/logo.svg" alt="logo">
+              </a>
+              <div class="header-lower-right theme-heading text-white">
+                <strong>Any <span>Size</span>, Any <span>Shape</span></strong>
               </div>
             </div>
           </div>
         </header>
         <!-- banner area part -->
-        <section class="hero-section py-50">
-          <div class="container">
-            <h1>Hero banner goes here</h1>
+        <section class="banner-slider-section">
+          <div class="banner-slider">
+            <div class="banner-slider-item">
+              <div class="banner-slider-img">
+                <img src="assets/images/home-banner.webp" alt="home-banner">
+              </div>
+              <div class="container header-top-space">
+                <div class="theme-heading text-white text-center">
+                  <h2 class="banner-slider-heading text-white">Custom <span>Inflatables</span></h2>
+                  <p>Supplying The Worlds Best Events</p>
+                  <a href="#" class="btn mb-4">EXPLORE NOW</a>
+                  <div class="d-flex justify-content-center">
+                    <a href="#jumpto" class="banner-down-btn d-flex">
+                      <img src="assets/images/arrow-down-circle.svg" alt="arrow-down-circle">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="banner-slider-item">
+              <div class="banner-slider-img">
+                <img src="assets/images/desert.webp" alt="home-banner">
+              </div>
+              <div class="container header-top-space">
+                <div class="theme-heading text-white text-center">
+                  <h2 class="banner-slider-heading text-white">Custom <span>Inflatables</span></h2>
+                  <a href="#" class="btn mb-4">EXPLORE NOW</a>
+                  <div class="d-flex justify-content-center">
+                    <a href="#jumpto" class="banner-down-btn d-flex">
+                      <img src="assets/images/arrow-down-circle.svg" alt="arrow-down-circle">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="banner-slider-item">
+              <div class="banner-slider-img">
+                <img src="assets/images/home-banner.webp" alt="home-banner">
+              </div>
+              <div class="container header-top-space">
+                <div class="theme-heading text-white text-center">
+                  <h2 class="banner-slider-heading text-white">Similique <span>elit</span></h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <a href="#" class="btn mb-4">EXPLORE NOW</a>
+                  <div class="d-flex justify-content-center">
+                    <a href="#jumpto" class="banner-down-btn d-flex">
+                      <img src="assets/images/arrow-down-circle.svg" alt="arrow-down-circle">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="banner-slider-item">
+              <div class="banner-slider-img">
+                <img src="assets/images/desert.webp" alt="home-banner">
+              </div>
+              <div class="container header-top-space">
+                <div class="theme-heading text-white text-center">
+                  <h2 class="banner-slider-heading text-white">Custom <span>Inflatables</span></h2>
+                  <p>Supplying The Worlds Best Events</p>
+                  <a href="#" class="btn mb-4">EXPLORE NOW</a>
+                  <div class="d-flex justify-content-center">
+                    <a href="#jumpto" class="banner-down-btn d-flex">
+                      <img src="assets/images/arrow-down-circle.svg" alt="arrow-down-circle">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
         <!-- content area part -->
-        <div class="main-content">
-          <section class="container welcome">
+        <div class="main-content" id="jumpto">
+          <section class="container">
+            <h2>Welcome section goes here</h2>
+            <h2>Welcome section goes here</h2>
+            <h2>Welcome section goes here</h2>
             <h2>Welcome section goes here</h2>
           </section>
         </div>
@@ -107,6 +199,7 @@
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <!-- vendor js -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
     <!-- theme script --> 
     <script src="assets/js/scripts.js"></script> 
   </body>

@@ -1,6 +1,8 @@
-/* ----- Desktop ≥1024px and ≤1190 ----- */
-@media ( min-width: 1024px ) and ( max-width: 1199px ) {
-
+/* ----- Laptop ----- */
+@media ( max-width: 1500px ) {
+    .main-menu ul {
+        padding-left: 0;
+    }
 }
 
 /* ----- Tablet ≥768px and ≤1023 ----- */
@@ -21,4 +23,10 @@
 /* ----- Small devices ≤640px ----- */
 @media ( max-width: 640px ) {
 
+}
+
+@media (max-height: 700px) {
+    .banner-slider .theme-heading {
+        padding: 40px 0 70px;
+    }    
 }
