@@ -4,8 +4,6 @@ $mainHeaderHeight = $('.main-header').outerHeight();
 /* Script on ready
 ------------------------------------------------------------------------------*/
 $( document ).ready( function() {
-	//do jQuery stuff when DOM is ready
-
 	/* Responsive Jquery Navigation */
 	$( '.hamburger' ).click(function() {
 		$( '.mobilenav' ).toggleClass( 'is-open' );
@@ -14,7 +12,6 @@ $( document ).ready( function() {
 		$( '.mobilenav' ).removeClass( 'is-open' );
 	} );
 	$('.header-top-space').css('padding-top', $mainHeaderHeight);
-
 	/* header sticky */
 	$(window).scroll(function() {
 		if ($(this). scrollTop() > 1){
@@ -24,29 +21,34 @@ $( document ).ready( function() {
 			$('.main-header').removeClass("sticky");
 		}
 	});
-
 	/* banner slider */
 	$('.banner-slider').owlCarousel({
 		nav:false,
-		items:1,
-		// responsive:{
-		// 	0:{
-		// 		items:1
-		// 	},
-		// 	600:{
-		// 		items:3
-		// 	},
-		// 	1000:{
-		// 		items:5
-		// 	}
-		// }
+		items:1
 	})
-
-/* Jump to next section */
-$( '.banner-down-btn' ).on( 'click', function(e) {
-	e.preventDefault();
-	$( 'html, body' ).animate({ scrollTop: $($( this ).attr( 'href' )).offset().top - $mainHeaderHeight + 110}, 500, 'linear' );
-});
+	/* Jump to next section */
+	$( '.banner-down-btn' ).on( 'click', function(e) {
+		e.preventDefault();
+		$( 'html, body' ).animate({ scrollTop: $($( this ).attr( 'href' )).offset().top - $mainHeaderHeight + 120}, 500, 'linear' );
+	});
+	// updates-slider
+	var updatesSlider = $('.updates-slider');
+	updatesSlider.owlCarousel({
+		nav:true,
+		dots: false,
+		navContainer: '.updates-custom-nav',
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:2
+			},
+			1000:{
+				items:3
+			}
+		}
+	})
 
 } );
 
