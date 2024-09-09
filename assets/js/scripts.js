@@ -24,7 +24,8 @@ $( document ).ready( function() {
 	/* banner slider */
 	$('.banner-slider').owlCarousel({
 		nav:false,
-		items:1
+		items:1,
+		autoplay:true,
 	})
 	/* Jump to next section */
 	$( '.banner-down-btn' ).on( 'click', function(e) {

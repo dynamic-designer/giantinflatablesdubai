@@ -1,7 +1,15 @@
 /* CSS Document */
 
-/* theme fonts goes here */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700');
+/* Web fonts */
+@font-face {
+    font-family: 'Arial Rounded MT';
+    src: url('../fonts/ArialRoundedMTBold.woff2') format('woff2'),
+        url('../fonts/ArialRoundedMTBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 /* Table of Contents
 -----------------------------------------------------------------------------
@@ -149,7 +157,7 @@ picture{
 body {
     color: #ffffff;
     font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Arial Rounded MT', sans-serif;
     font-weight: 400;
     line-height: 1.2;
     background-color: #000000;
@@ -348,7 +356,7 @@ img[src$=".svg"] {
 ------------------------------------------------------------------------------*/
 a {
     color: #ffffff;
-    transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+    transition: 0.3s;
 }
 
 a:hover, a:focus {
@@ -371,7 +379,7 @@ input,
 select,
 textarea,
 button {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Arial Rounded MT', sans-serif;
 }
 
 input[type="text"],
@@ -414,7 +422,7 @@ textarea {
 select {
     -webkit-appearance: none;
     padding-right: 1.875em;
-    background-image: url(assets/images/select-down-arrow.svg);
+    background-image: url('../images/select-down-arrow.svg');
     background-size: 14px 7px;
     background-position: right 0.5em center;
     background-repeat: no-repeat;
@@ -488,6 +496,9 @@ input[type="search"]::-webkit-search-decoration {
 
 .form-group {
     margin-bottom: 30px;
+}
+.w-full {
+    width: 100%;
 }
 
 /* buttons */
@@ -725,6 +736,14 @@ td {
     white-space: nowrap;
     min-width: 100px;
 }
+.main-menu li.active a {
+    border-color: #d60309;
+    color: #d60309;
+}
+.main-menu li.active a:hover, .main-menu li.active a:focus {
+    border-color: #ffffff;
+    color: #ffffff;
+}
 .main-menu ul li a:hover, .main-menu ul li a:focus {
     background-color: #d60309;
     text-decoration: none;
@@ -905,6 +924,9 @@ td {
 .mobilenav ul li {
     font-size: 20px;
 }
+.mobilenav ul li.active a {
+    color: #000000;
+}
 
 .mobilenav ul a {
     display: block;
@@ -959,28 +981,6 @@ td {
     max-height: calc(100vh - 80px);
     padding-bottom: 60px;
     overflow-y: auto;
-}
-
-/* nav */
-.navigation {
-    width: 100%;
-    height: auto;
-}
-
-.navigation ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.navigation ul li {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.navigation ul li a {
-    display: block;
 }
 
 /*--- footer ---*/
@@ -1069,13 +1069,16 @@ td {
 }
 .footer-bottom-col h6, .footer-bottom-col .h6 {
     color: #d60309;
+    margin-bottom: 30px;
 }
 .footer-bottom-col.-middle h6, .footer-bottom-col.-middle .h6 {
     font-size: 18px;
 }
 .footer-bottom-img {
     height: 170px;
-    margin-bottom: 15px;
+    max-width: 350px;
+    width: 100%;
+    margin: 0 auto 15px;
 }
 .footer-bottom-img img {
     max-height: 100%;
@@ -1340,7 +1343,15 @@ a.products-box:hover, a.products-box:focus {
 .about-us-section {
     padding: 10px 0 40px;
 }
+.share-concept-form-box {
+    display: flex;
+    flex-direction: column;
+}
+.share-concept-form-box img {
+    position: relative;
+}
 .share-concept-form {
+    height: 100%;
     padding: 40px 20px 15px;
     margin-top: -22px;
     border: 1px solid #d60309;
@@ -1468,4 +1479,39 @@ a.updates-box:hover, a.updates-box:focus {
 }
 .contact-social-link img {
     max-width: 25px;
+}
+
+.breadcrumb {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px 0;
+}
+.breadcrumb-left, .breadcrumb-back {
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    padding: 6px 15px;
+}
+.breadcrumb-left span, .breadcrumb-back {
+    color: #d60309;
+}
+.breadcrumb .header-top-home {
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, 0.7);
+}
+.breadcrumb-back {
+    transition: 0.3s;
+}
+.breadcrumb-back:hover, .breadcrumb-back:focus {
+    background-color: #d60309;
+    color: #ffffff;
+    text-decoration: none;
+}
+.breadcrumb-back img {
+    margin-left: 10px;
 }
