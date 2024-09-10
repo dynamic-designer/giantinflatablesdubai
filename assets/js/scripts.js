@@ -26,6 +26,7 @@ $( document ).ready( function() {
 		nav:false,
 		items:1,
 		autoplay:true,
+		loop: true
 	})
 	/* Jump to next section */
 	$( '.banner-down-btn' ).on( 'click', function(e) {
